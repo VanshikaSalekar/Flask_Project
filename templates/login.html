@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Groco</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/style.css">
+</head>
+<body>
+<header class="header">
+    <a href="{{ url_for('index') }}" class="logo"> <i class="fas fa-shopping-basket"></i>groco</a>
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('products') }}">Products</a>
+        <a href="{{ url_for('categories') }}">Categories</a>
+        <a href="{{ url_for('review') }}">Review</a>
+        <a href="{{ url_for('blog') }}">Blog</a>
+    </nav>
+</header>
+
+<section class="login">
+    <form action="app.py" method="POST">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="Your Email" class="box" required>
+        <input type="password" placeholder="Your Password" class="box" required>
+        <p>Forgot Your Password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="signup.html">Create now</a></p>
+        <input type="submit" value="Login Now" class="btn">
+    </form>
+</section>
+
+<footer class="footer">
+    <!-- Include the footer content here, similar to index.html -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="http://127.0.0.1:5000/static/js/script.js"></script>
+</body>
+</html>

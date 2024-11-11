@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Groco</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/style.css">
+</head>
+<body>
+<header class="header">
+    <a href="{{ url_for('index') }}" class="logo"> <i class="fas fa-shopping-basket"></i>groco</a>
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('products') }}">Products</a>
+        <a href="{{ url_for('categories') }}">Categories</a>
+        <a href="{{ url_for('review') }}">Review</a>
+        <a href="{{ url_for('blog') }}">Blog</a>
+    </nav>
+</header>
+
+<section class="cart">
+    <h1>Your Shopping Cart</h1>
+    <div class="shopping-cart">
+        <!-- Repeat this block for each item in the cart -->
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="http://127.0.0.1:5000/static/images/carrot.jpg" alt="#">
+            <div class="content">
+                <h3>Fresh Carrot</h3>
+                <span class="price">₹39</span>
+                <span class="quantity">Quantity: 2</span>
+            </div>
+        </div>
+        <!-- End of item block -->
+    </div>
+    <div class="total">
+        <h3>Total: ₹<span id="total-price">78</span></h3>
+    </div>
+    <a href="#" class="btn">Checkout</a>
+</section>
+
+<footer class="footer">
+    <!-- Include the footer content here, similar to index.html -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="http://127.0.0.1:5000/static/js/script.js"></script>
+</body>
+</html>
